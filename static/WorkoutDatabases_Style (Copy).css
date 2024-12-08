@@ -1,0 +1,105 @@
+/* Base Body Styling */
+body {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Adjusted to allow scrolling for larger tables */
+    margin: 0;
+    padding: 0;
+}
+
+#returnToProfile {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    background-color: #ffcc00;
+    color: #1c1c1c;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#returnToProfile:hover {
+    background-color: #ffaa00;
+    color: #1c1c1c;
+}
+
+/* Container for the Table */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #282828;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Header Styling */
+h1 {
+    font-size: 3.0em;
+    color: #ffcc00;
+    margin-bottom: 30px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Table Header Styling */
+th {
+    background-color: #333333;
+    color: #ffcc00;
+    font-size: 1.2em;
+    padding: 10px;
+    text-transform: uppercase;
+    border: 1px solid #444;
+}
+
+/* Table Cell Styling */
+td {
+    background-color: #222222;
+    color: #ffffff;
+    text-align: left;
+    padding: 10px;
+    vertical-align: top;
+    border: 1px solid #444;
+}
+
+/* Unordered List Inside Table Cells */
+td ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+td ul li {
+    margin: 5px 0;
+}
+
+/* Hover Effect for Table Rows */
+tr:hover td {
+    background-color: #333333;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    th, td {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}

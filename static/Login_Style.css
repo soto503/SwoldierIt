@@ -1,0 +1,99 @@
+body {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #282828;
+    padding: 65px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 3.0em;
+    color: #ffcc00;
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 3px solid #ffcc00;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+button {
+    width: 150px;
+    padding: 10px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffaa00;
+}
+
+#createAccount {
+    margin-top: 20px;
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+#createAccount:hover {
+    color: #ffaa00;
+}
+#workoutDatabase {
+    margin-top: 20px;
+    display: inline-block; /* Ensure it's treated like a button */
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    background-color: #ffcc00;
+    color: #1c1c1c;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#workoutDatabase:hover {
+    background-color: #ffaa00;
+    color: #1c1c1c;
+}
+
+@media (max-width: 600px) {
+    body {
+        height: auto;
+    }
+
+    input[type="text"], input[type="password"],
+    button {
+        width: 80%;
+    }
+}

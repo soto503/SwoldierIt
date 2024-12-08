@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Workout Databases</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='WorkoutDatabases_Style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Public Workout Databases</h1>
+        
+        <!-- Back to Login Button -->
+        <a href="{{ url_for('home') }}" id="backToLogin">Back to Login</a>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Chest</th>
+                    <th>Back</th>
+                    <th>Biceps</th>
+                    <th>Triceps</th>
+                    <th>Legs</th>
+                    <th>Shoulders</th>
+                    <th>Cardio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <ul>
+                            {% for workout in chest_workouts %}
+                            <li>{{ workout.Exercise }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            {% for workout in back_workouts %}
+                            <li>{{ workout.Exercise }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            {% for workout in biceps_workouts %}
+                            <li>{{ workout.Exercise }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            {% for workout in triceps_workouts %}
+                            <li>{{ workout.Exercise }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            {% for workout in legs_workouts %}
+                            <li>{{ workout.Exercise }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            {% for workout in shoulders_workouts %}
+                            <li>{{ workout.Exercise }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            {% for workout in cardio_workouts %}
+                            <li>{{ workout.Exercise }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

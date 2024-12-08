@@ -1,0 +1,263 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #1F1F1F;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    font-size: 16px;
+}
+
+.sidebar a:hover {
+    background-color: #333333;
+}
+
+/* Main Content */
+.profile-container {
+    display: flex;
+    position: relative; /* Keep this relative for positioning child elements */
+}
+
+.content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+/* Header Styling */
+.header-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -90px; /* Move header up towards the barbell */
+}
+
+h1 {
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 60px;
+}
+
+/* User Info */
+.user-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 16px;
+}
+
+.user-info span {
+    color: #FFFFFF;
+}
+
+/* Workout Itinerary */
+.workout-itinerary {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.day-container {
+    background-color: #1F1F1F;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.day-container h2 {
+    color: #FF8C00;
+    text-align: center;
+    font-size: 18px;
+    margin: 0; /* Remove margin for consistency */
+}
+
+.day-container h3 {
+    color: #FF8C00;
+    text-align: center;
+    font-size: 18px;
+    margin: 0; /* Remove margin for consistency */
+}
+
+.day-container ul {
+    list-style: none;
+    padding: 0;
+    color: #FFFFFF;
+}
+
+.day-container ul li {
+    padding: 5px 0;
+}
+
+/* Routine Breakdown */
+.routine-breakdown {
+    background-color: #1F1F1F;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.routine-breakdown h3 {
+    color: #FF8C00;
+    margin-bottom: 10px;
+}
+
+.routine-breakdown p {
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+/* Barbell Styling */
+.barbell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 20px 0;
+}
+
+.barbell .weight {
+    width: 12px;
+    height: 90px;
+    background-color: #FF8C00;
+    border-radius: 5px;
+}
+
+.barbell .weight.left {
+    margin-right: 5px;
+}
+
+.barbell .weight.right {
+    margin-left: 5px;
+}
+
+/* Styles for smaller weights */
+.barbell .weight.small {
+    width: 15px;
+    height: 147.5px;
+}
+
+.barbell .weight.tiny {
+    width: 20px;
+    height: 200px;
+}
+
+.barbell .bar {
+    width: 770px;
+    height: 22px;
+    background-color: #FF8C00;
+}
+
+/* About Us Page Styling */
+.about-us-content {
+    background-color: #1F1F1F;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    text-align: center;
+    max-width: 800px;
+}
+
+.about-us-content p {
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+#backToProfile {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FF8C00;
+    color: #1c1c1c;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#backToProfile:hover {
+    background-color: #FFA500;
+    color: #121212;
+}
+
+.split-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.split-buttons button {
+    background-color: #FF8C00;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.split-buttons button:hover {
+    background-color: #FFA500;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Ensures equal width for all columns */
+}
+
+thead,tbody {
+  margin: 0;
+  padding: 0;
+  }
+
+th, td {
+    border: 1px solid #333;
+    text-align: center;
+    vertical-align: top; /* Align content to the top */
+    padding: 10px;
+    width: 20%; /* Assuming 5 columns - Adjust if needed */
+    height: 35px; /* Set a fixed height for rows */
+    word-wrap: break-word; /* Wrap long text inside cells */
+    overflow: hidden; /* Prevent overflow issues */
+}
+
+th {
+    background-color: #1f1f1f; /* Header background */
+    color: #fff; /* Header text color */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 5px 0;
+}

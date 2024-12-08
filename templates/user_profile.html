@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swoldier Itineraries - User Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='user_profileStyle.css') }}">
+</head>
+<body>
+    <div class="profile-container">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <a href="/">Home</a>
+            <a href="/workoutdatabases">Workout Database</a>
+            <a href="/about_us">About Us</a>
+            <a href="/logout">Log Out</a>
+        </div>
+
+        <!-- Main Profile Content -->
+
+<div class="content">
+    <div class="header-container">
+        <h1>Swoldier Itineraries</h1>
+        <div class="user-info">
+            <span>First Name: <strong>{{ user['first_name'] }}</strong></span>
+                    <span>Last Name: <strong>{{ user['last_name'] }}</strong></span>
+                    <span>Username: <strong>{{ user['username'] }}</strong></span>
+
+        </div>
+    </div>
+<div class="barbell">
+    <div class="weight left"></div>
+    <div class="weight small left"></div> <!-- Smaller left weight -->
+    <div class="weight tiny left"></div> <!-- Tiny left weight -->
+    <div class="bar"></div>
+    <div class="weight tiny right"></div> <!-- Tiny right weight -->
+    <div class="weight small right"></div> <!-- Smaller right weight -->
+    <div class="weight right"></div>
+</div>
+
+
+<div class="split-buttons">
+    <form method="GET" action="{{ url_for('user_profile') }}">
+        <button type="submit" name="split_type" value="5_day">5 Day Split</button>
+        <button type="submit" name="split_type" value="ppl">PPL Split</button>
+        <button type="submit" name="split_type" value="total_body">Total Body Split</button>
+    </form>
+</div>
+
+            <!-- Workout Itinerary -->
+
+<table>
+    <thead>
+        <tr>
+            {% for header, _ in table_data %}
+            <th>{{ header }}</th>
+            {% endfor %}
+        </tr>
+     </thead>
+    <tbody>
+        <tr>
+            {% for _, exercises in table_data %}
+            <td>
+                <ul>
+                    {% for exercise in exercises %}
+                    <li>{{ exercise['Exercise'] }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+            {% endfor %}
+        </tr>
+    </tbody>
+    
+   
+</table>
+
+<script>
+    function changeSplit(splitType) {
+        window.location.href = {{ url_for('user_profile') }}?split_type=${splitType};
+    }
+</script>
+
+</body>
+</html>

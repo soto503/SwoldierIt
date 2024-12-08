@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Swoldier Itineraries</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='acStyle.css') }}">
+</head>>
+<body>
+    <div class="container">
+        <h1>Create Your Account</h1>
+
+        <!-- Account Creation Form -->
+        <form action="/create_account" method="POST">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="first_name" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="last_name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="newUsername">Create a Username:</label>
+            <input type="text" id="newUsername" name="username" required>
+
+            <label for="newPassword">Password:</label>
+            <input type="password" id="newPassword" name="password" required>
+
+            <button type="submit">Create Account</button>
+        </form>
+
+        <br>
+        <a href="{{ url_for('home') }}">Back to Login</a>
+    </div>
+</body>
+</html>
