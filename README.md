@@ -33,17 +33,18 @@ Users can view and manage workout itineraries and explore various fitness routin
    git clone https://github.com/soto503/SwoldierIt.git
    cd SwoldierIt
    
-2. (Recommended) Set up a virtual environment
+2. (Recommended) Set up a virtual environment:
    python3 -m venv venv
-   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   source venv/bin/activate
+   # On Windows, use `venv\Scripts\activate`
    
-3. Install Requirements
+4. Install Requirements:
    pip install -r requirements.txt
    
-4. Configure the Database:
+5. Configure the Database:
    Create a MySQL database and update config.py with your database credentials.
 
-5. Run the application:
+6. Run the application:
    python flaskapp.py
    Open the application in your browser at http://127.0.0.1:5000
 
